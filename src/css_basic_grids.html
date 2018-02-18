@@ -5,6 +5,41 @@
   <title>CSS Basic Grids</title>
   <style>
 
+    header {
+      grid-area: header;
+      background-color: #8ca0ff;
+    }
+
+    main {
+      grid-area: main;
+      background-color: #ffa08c;
+    }
+
+    aside {
+      grid-area: sidebar;
+      background-color: #ffff64;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #8cffa0;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      display: grid;
+      height: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 5fr 90fr 5fr;
+      grid-template-areas:
+          "header header"
+          "main sidebar"
+          "footer footer";
+    }
+
   </style>
 </head>
 <body>
