@@ -4,9 +4,21 @@
   <meta charset="UTF-8">
   <title>Twitter Homepage</title>
   <link rel="stylesheet" href="./css/twitter_core.bundle.css" class="coreCSSBundles">
-  <link rel="stylesheet" class="moreCSSBundles" href="./css/twitter_more_1.bundle.css">
   <link rel="stylesheet" class="moreCSSBundles" href="./css/twitter_more_2.bundle.css">
+  <style>
+    div[class^='StaticLoggedOutHomePage-signupBlock'] {
+      background: #e6e6e6;
+      outline: dashed 2px red;
+    }
 
+    div.StaticLoggedOutHomePage-cell {
+      outline: dashed 2px red;
+    }
+
+    div[class^='StreamsFooter'] {
+      outline: dashed 2px red;
+    }
+  </style>
 </head>
 <body>
 <div class="StaticLoggedOutHomePage">
@@ -23,9 +35,7 @@
             <div class="LoginForm-staticForgot">
               <a class="forgot" href="/account/begin_password_reset" rel="noopener">Forgot password?</a>
             </div>
-
           </div>
-
 
           <input type="submit" class="EdgeButton EdgeButton--secondary EdgeButton--medium submit js-submit" value="Log in">
         </form>
@@ -40,7 +50,6 @@
         <h1 class="StaticLoggedOutHomePage-signupTitle">See what’s happening in the world right now</h1>
         <h2 class="StaticLoggedOutHomePage-signupSubtitle">Join Twitter today.</h2>
         <form class="StaticLoggedOutHomePage-signupForm" method="POST" action="/account/create">
-          <script src="/i/js_inst?c_name=signup_ui_metrics&amp;mm_name=m_metrics&amp;dm_name=d_metrics" async=""></script>
           <div class="StaticLoggedOutHomePage-field StaticLoggedOutHomePage-phoneEmail">
             <input type="text" class="StaticLoggedOutHomePage-input text-input email-input" autocomplete="off" name="user[email]" placeholder="Phone or email">
             <span class="StaticLoggedOutHomePage-validationIconContainer">
@@ -146,18 +155,6 @@
     </div>
   </div>
 
-
-  <noscript>
-    &lt;div class="front-warning"&gt;
-    &lt;h3&gt;Twitter.com makes heavy use of JavaScript&lt;/h3&gt;
-    &lt;p&gt;If you cannot enable it in your browser's preferences, you may have a better experience on our &lt;a href="http://m.twitter.com" rel="noopener"&gt;mobile site&lt;/a&gt;.&lt;/p&gt;
-    &lt;/div&gt;
-  </noscript>
-
-  <div class="front-warning" id="front-no-cookies-warn">
-    <h3>Twitter.com makes heavy use of browser cookies</h3>
-    <p>Please enable cookies in your browser preferences before signing in.</p>
-  </div>
   <div class="StreamsFooter StreamsFooter--fixed">
     <ul class="StreamsFooter-list u-cf">
       <li class="StreamsFooter-item"><a href="/about" rel="noopener">About</a></li>
