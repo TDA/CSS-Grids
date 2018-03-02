@@ -65,6 +65,7 @@
 
     footer ul {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
     }
 
@@ -78,6 +79,29 @@
           ". shortSignIn"
           "sidebar main"
           "footer footer";
+    }
+
+
+    @media screen and (max-width: 1024px) {
+      .StaticLoggedOutHomePage-content {
+        grid-template-areas:
+            ". ."
+            "sidebar main"
+            "footer footer";
+      }
+
+      .StaticLoggedOutHomePage-login {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      .StaticLoggedOutHomePage-content {
+        grid-template-areas:
+            "main"
+            "sidebar"
+            "footer";
+      }
     }
 
     .StaticLoggedOutHomePage-signupBlock {
