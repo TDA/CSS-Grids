@@ -6,6 +6,8 @@
   <style>
     html, body {
       height: 100vh;
+      padding: 0;
+      margin: 0;
     }
     @font-face {
       font-family: "edgeicons";
@@ -14,6 +16,16 @@
 
     body {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: #e6ecf0;
+      color: #14171a;
+      font-size: 14px;
+      line-height: 20px;
+      overflow-y: scroll;
+    }
+
+    .StaticLoggedOutHomePage-signupTitle {
+      font-size: 27px;
+      line-height: 32px;
     }
 
     .Icon:after, .Icon:before {
@@ -24,6 +36,43 @@
       text-align: center;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale
+    }
+
+    .EdgeButton--primary {
+      background-color: #1da1f2;
+      border: 1px solid #1da1f2;
+      color: #fff;
+    }
+    .EdgeButton--medium {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 6px 16px;
+    }
+
+    .EdgeButton, .EdgeButton:visited {
+      border-radius: 100px;
+      box-shadow: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 20px;
+      padding: 6px 16px;
+      position: relative;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .StreamsFooter {
+      border-top: 1px solid #e6ecf0;
+      padding: 11px 0;
+      background-color: #fff;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .StreamsFooter-item a, .StreamsFooter-copyright {
+      color: #aab8c2;
+      font-size: 12px;
     }
 
     .StaticLoggedOutHomePage-communicationBlock .twitterIcon-bird {
@@ -81,7 +130,7 @@
       height: 100vh;
       align-items: center;
       justify-items: center;
-      grid-template-rows: 10vh auto 10vh;
+      grid-template-rows: 10vh auto max-content;
       grid-template-columns: repeat(2, 1fr) ;
       grid-template-areas:
           ". shortSignIn"
@@ -123,7 +172,7 @@
 
     @media screen and (max-width: 800px) {
       .StaticLoggedOutHomePage {
-        grid-template-rows: auto auto 10vh;
+        grid-template-rows: auto auto max-content;
         grid-template-columns: repeat(1, 1fr) ;
         grid-template-areas:
             "main"
