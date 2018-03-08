@@ -38,6 +38,92 @@
       -moz-osx-font-smoothing: grayscale
     }
 
+    .StaticLoggedOutHomePage-signupForm input[type="text"], .StaticLoggedOutHomePage-signupForm input[type="password"] {
+      margin: 8px auto;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .StaticLoggedOutHomePage-input {
+      padding: 12px;
+    }
+
+    input, textarea, div[contenteditable], .t1-select {
+      display: inline-block;
+      width: 210px;
+      padding: 4px;
+      margin: 0;
+      outline: 0;
+      background-color: #fff;
+      border: 1px solid #e6ecf0;
+      border-radius: 3px;
+    }
+
+    input:focus, textarea:focus,
+    div[contenteditable="true"]:focus,
+    div[contenteditable="true"].fake-focus,
+    div[contenteditable="plaintext-only"]:focus,
+    div[contenteditable="plaintext-only"].fake-focus {
+      outline: 0;
+      color: #14171a;
+      border-color: rgba(0, 132, 180, 0.5);
+    }
+
+    .StaticLoggedOutHomePage-getStartedBlock, .StaticLoggedOutHomePage-signupHeader {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin: 16px auto;
+    }
+
+    .StaticLoggedOutHomePage-login {
+      width: 100%;
+    }
+
+    .StaticLoggedOutHomePage-login .LoginForm-input {
+      margin-right: 12px;
+      width: 210px;
+    }
+
+    .StaticLoggedOutHomePage-login .LoginForm {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin: 0 auto;
+      max-width: 600px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .StaticLoggedOutHomePage-login .LoginForm input {
+      padding: 12px;
+      width: auto;
+    }
+
+    .StaticLoggedOutHomePage-login .LoginForm-input input {
+      width: 100%;
+    }
+
+    .StaticLoggedOutHomePage-login .LoginForm .EdgeButton--secondary {
+      height: 100%;
+    }
+
+    .LoginForm input {
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-top: 12px;
+      width: 100%;
+    }
+
+    .StaticLoggedOutHomePage-login .LoginForm-staticForgot a {
+      color: #aab8c2;
+    }
+
+    .t1-label, input, textarea, div[contenteditable], .t1-select {
+      margin: 0;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
     .EdgeButton--primary {
       background-color: #1da1f2;
       border: 1px solid #1da1f2;
@@ -95,6 +181,34 @@
     .StaticLoggedOutHomePage-narrowLoginButton {
       display: none;
     }
+    div[class^='StaticLoggedOutHomePage-signupBlock'] {
+      background: #e6e6e6;
+      outline: dashed 2px red;
+    }
+
+    div.StaticLoggedOutHomePage-cell {
+      outline: dashed 2px red;
+    }
+
+    footer {
+      outline: dashed 2px red;
+    }
+
+    footer ul, footer li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    footer ul li {
+      padding: 0 9px;
+    }
 
     @media only screen and (max-width: 1023px), screen and (max-height: 660px) {
       .StaticLoggedOutHomePage-narrowLoginButton {
@@ -118,48 +232,7 @@
       }
     }
 
-    div[class^='StaticLoggedOutHomePage-signupBlock'] {
-    background: #e6e6e6;
-    outline: dashed 2px red;
-    }
-
-    div.StaticLoggedOutHomePage-cell {
-    outline: dashed 2px red;
-    }
-
-    footer {
-    outline: dashed 2px red;
-    }
-
-    footer ul, footer li {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    footer ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    footer ul li {
-      padding: 0 9px;
-    }
-
-    .StaticLoggedOutHomePage {
-      display: grid;
-      height: 100vh;
-      align-items: center;
-      justify-items: center;
-      grid-template-rows: 10vh auto max-content;
-      grid-template-columns: repeat(2, 1fr) ;
-      grid-template-areas:
-          ". shortSignIn"
-          "sidebar main"
-          "footer footer";
-    }
-
+    /* Grid definitions */
     .StaticLoggedOutHomePage-signupBlock {
       grid-area: main;
       max-width: 350px;
@@ -178,9 +251,21 @@
       grid-area: footer;
     }
 
+    .StaticLoggedOutHomePage {
+      display: grid;
+      height: 100vh;
+      align-items: center;
+      justify-items: center;
+      grid-template-rows: 10vh auto max-content;
+      grid-template-columns: repeat(2, 1fr) ;
+      grid-template-areas:
+          ". shortSignIn"
+          "sidebar main"
+          "footer footer";
+    }
+
     @media screen and (max-width: 1024px) {
       .StaticLoggedOutHomePage {
-
         grid-template-areas:
             ". ."
             "sidebar main"
@@ -236,19 +321,9 @@
     <form class="StaticLoggedOutHomePage-signupForm" method="POST" action="/account/create">
       <div class="StaticLoggedOutHomePage-field StaticLoggedOutHomePage-phoneEmail">
         <input type="text" class="StaticLoggedOutHomePage-input text-input email-input" autocomplete="off" name="user[email]" placeholder="Phone or email">
-        <span class="StaticLoggedOutHomePage-validationIconContainer">
-<span class="Icon Icon--close"></span>
-<span class="Icon Icon--check"></span>
-</span>
-        <div class="StaticLoggedOutHomePage-helpText"></div>
       </div>
       <div class="StaticLoggedOutHomePage-field StaticLoggedOutHomePage-password">
         <input type="password" class="StaticLoggedOutHomePage-input text-input" name="user[user_password]" placeholder="Password">
-        <span class="StaticLoggedOutHomePage-validationIconContainer">
-          <span class="Icon Icon--close"></span>
-          <span class="Icon Icon--check"></span>
-        </span>
-        <div class="StaticLoggedOutHomePage-helpText"></div>
       </div>
       <div class="StaticLoggedOutHomePage-getStartedBlock">
         <button type="button" class="EdgeButton EdgeButton--medium EdgeButton--primary StaticLoggedOutHomePage-getStartedButton">
@@ -256,17 +331,6 @@
         </button>
         <div>
           <p>Have an account? <a href="/login">Log in</a></p>
-        </div>
-      </div>
-      <div class="StaticLoggedOutHomePage-additionalOptionsBlock hidden">
-        <div class="StaticLoggedOutHomePage-field StaticLoggedOutHomePage-fullName">
-          <input type="text" class="StaticLoggedOutHomePage-input text-input" autocomplete="off" name="user[name]" placeholder="Full name">
-          <span class="StaticLoggedOutHomePage-validationIconContainer">
-            <span class="Icon Icon--close"></span>
-            <span class="Icon Icon--check"></span>
-          </span>
-          <div class="StaticLoggedOutHomePage-helpText">
-          </div>
         </div>
       </div>
     </form>
