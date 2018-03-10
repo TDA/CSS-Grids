@@ -200,6 +200,10 @@
       position: absolute
     }
 
+    svg:not(:root) {
+      overflow: hidden;
+    }
+
     a {
       color: #1c94e0;
       text-decoration: none;
@@ -268,6 +272,13 @@
     .StaticLoggedOutHomePage-communicationBlock {
       grid-area: sidebar;
       position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      /* Nested grid, both for the stupid bird as well as serving as an example */
+      display: grid;
+      justify-content: center;
+      align-content: center;
     }
 
     .StaticLoggedOutHomePage-login {
@@ -286,7 +297,7 @@
       grid-template-rows: 10vh auto max-content;
       grid-template-columns: repeat(2, 1fr) ;
       grid-template-areas:
-          ". shortSignIn"
+          "sidebar shortSignIn"
           "sidebar main"
           "footer footer";
     }
@@ -371,7 +382,7 @@
 
   <div class="StaticLoggedOutHomePage-cell StaticLoggedOutHomePage-communicationBlock">
     <!--?xml version="1.0" encoding="UTF-8"?-->
-    <svg style="display: none" class="twitterIcon-bird" viewBox="0 0 1208 982" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg style="" class="twitterIcon-bird" viewBox="0 0 1208 982" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
       <title>bird</title>
       <desc>Created with Sketch.</desc>
