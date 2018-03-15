@@ -1,0 +1,247 @@
+html, body {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: "edgeicons";
+    src: url("../font/edge-icons-Regular.woff") format("woff");
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #e6ecf0;
+    color: #14171a;
+    font-size: 14px;
+    line-height: 20px;
+    overflow-y: scroll;
+}
+
+.StaticLoggedOutHomePage {
+    background-color: #fff;
+}
+
+.StaticLoggedOutHomePage-signupTitle {
+    font-size: 27px;
+    line-height: 32px;
+}
+
+
+.StaticLoggedOutHomePage-login .LoginForm input {
+    padding: 12px;
+    width: auto;
+}
+
+.StaticLoggedOutHomePage-login .LoginForm-input input {
+    width: 100%;
+}
+
+.StaticLoggedOutHomePage-login .LoginForm .EdgeButton--secondary {
+    height: 100%;
+}
+
+.LoginForm input {
+    box-sizing: border-box;
+    margin-top: 12px;
+    width: 100%;
+}
+
+.StaticLoggedOutHomePage-login .LoginForm-staticForgot a {
+    color: #aab8c2;
+}
+
+.Icon:after, .Icon:before {
+    display: block;
+    font-family: "edgeicons";
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.StaticLoggedOutHomePage-signupBlock .Icon--bird {
+    color: #1da1f2;
+    font-size: 45px;
+    margin-bottom: 8px;
+}
+
+.Icon--bird:before {
+    content: "\f179"
+}
+
+.Icon--people:before {
+    content: "\f178"
+}
+
+.Icon--reply:before {
+    content: "\f151"
+}
+
+.Icon--search:before {
+    content: "\f058"
+}
+
+.StaticLoggedOutHomePage-signupForm input[type="text"], .StaticLoggedOutHomePage-signupForm input[type="password"] {
+    margin: 8px auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+.StaticLoggedOutHomePage-input {
+    padding: 12px;
+}
+
+.StaticLoggedOutHomePage-communicationItem {
+    color: #fff;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 48px auto;
+    position: relative;
+}
+
+.StaticLoggedOutHomePage-communicationItem .Icon {
+    font-size: 35px;
+    margin-right: 16px;
+}
+
+input, textarea, div[contenteditable], .t1-select {
+    display: inline-block;
+    width: 210px;
+    padding: 4px;
+    margin: 0;
+    outline: 0;
+    background-color: #fff;
+    border: 1px solid #e6ecf0;
+    border-radius: 3px;
+}
+
+input:focus, textarea:focus,
+div[contenteditable="true"]:focus,
+div[contenteditable="true"].fake-focus,
+div[contenteditable="plaintext-only"]:focus,
+div[contenteditable="plaintext-only"].fake-focus {
+    outline: 0;
+    color: #14171a;
+    border-color: rgba(0, 132, 180, 0.5);
+}
+
+.StaticLoggedOutHomePage-login {
+    width: 100%;
+}
+
+.StaticLoggedOutHomePage-login .LoginForm-input {
+    margin-right: 12px;
+    width: 210px;
+}
+
+.t1-label, input, textarea, div[contenteditable], .t1-select {
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.EdgeButton--primary {
+    background-color: #1da1f2;
+    border: 1px solid #1da1f2;
+    color: #fff;
+}
+
+.EdgeButton--secondary {
+    background-color: #fff;
+    border: 1px solid #1da1f2;
+    color: #1da1f2;
+}
+
+.EdgeButton--medium {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 6px 16px;
+}
+
+.EdgeButton, .EdgeButton:visited {
+    border-radius: 100px;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.StaticLoggedOutHomePage-narrowLoginButton {
+    display: none;
+}
+
+@media only screen and (max-width: 1023px), screen and (max-height: 660px) {
+    .StaticLoggedOutHomePage-narrowLoginButton {
+        display: inline-block;
+    }
+
+    .StaticLoggedOutHomePage-login {
+        display: none;
+    }
+}
+
+.StreamsFooter {
+    border-top: 1px solid #e6ecf0;
+    padding: 11px 0;
+    background-color: #fff;
+    width: 100%;
+}
+
+.StreamsFooter-item a, .StreamsFooter-copyright {
+    color: #aab8c2;
+    font-size: 12px;
+}
+
+.StaticLoggedOutHomePage-communicationBlock .twitterIcon-bird {
+    max-width: none;
+    position: absolute
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+a {
+    color: #1c94e0;
+    text-decoration: none;
+}
+
+footer ul, footer li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer ul li {
+    padding: 0 9px;
+}
+
+
+@media only screen and (min-width: 800px) {
+    .StaticLoggedOutHomePage-communicationBlock .twitterIcon-bird {
+        height: 140vh;
+        right: -80vh;
+        top: -20vh
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .StaticLoggedOutHomePage-communicationBlock .twitterIcon-bird {
+        height: 150%;
+        right: -30%;
+        top: -30%
+    }
+}
