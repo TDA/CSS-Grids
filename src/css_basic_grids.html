@@ -31,24 +31,39 @@
       height: 100%;
     }
 
+    nav {
+      grid-area: nav;
+      background: #ffd60c;
+      display: flex;
+    }
+
     body {
       display: grid;
       margin: 0;
       height: 100%;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       grid-template-rows: 5% auto 5%;
       grid-template-areas:
-          "header header"
-          "main sidebar"
-          "footer footer";
+          "header header header"
+          "nav main sidebar"
+          "footer footer footer";
     }
 
   </style>
 </head>
 <body>
-<header>This is a header</header>
-<main>This is the main part</main>
-<aside>This is a sidebar</aside>
-<footer>This is a footer</footer>
+  <nav>
+    <ul>
+      <li><a href="">Link to something</a></li>
+      <li><a href="">Link to something</a></li>
+      <li><a href="">Link to something</a></li>
+      <li><a href="">Link to something</a></li>
+      <li><a href="">Link to something</a></li>
+    </ul>
+  </nav>
+  <header>This is a header</header>
+  <main>This is the main part</main>
+  <aside>This is a sidebar</aside>
+  <footer>This is a footer</footer>
 </body>
 </html>
