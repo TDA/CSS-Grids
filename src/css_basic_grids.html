@@ -5,26 +5,33 @@
   <title>CSS Basic Grids</title>
   <style>
 
+    header, nav, aside, footer, main {
+      outline: dashed 2px red;
+    }
+
     header {
-      grid-area: header;
+      grid-row: 1;
+      grid-column: span 5;
       background-color: #8ca0ff;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 2.5em;
+      text-align: center;
     }
 
     main {
-      grid-area: main;
+      grid-column: span 3;
       background-color: #ffa08c;
     }
 
     aside {
-      grid-area: sidebar;
       background-color: #ffff64;
     }
 
     footer {
-      grid-area: footer;
+      grid-row: 3;
+      grid-column: span 5;
       background-color: #8cffa0;
+      text-align: center;
     }
 
     html {
@@ -32,21 +39,15 @@
     }
 
     nav {
-      grid-area: nav;
       background: #ffd60c;
-      display: flex;
     }
 
     body {
       display: grid;
       margin: 0;
       height: 100%;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(5, 20%);
       grid-template-rows: 5% auto 5%;
-      grid-template-areas:
-          "header header header"
-          "nav main sidebar"
-          "footer footer footer";
     }
 
   </style>
