@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Display Tables</title>
+  <style>
+    header, nav, aside, footer, main {
+      outline: dashed 2px red;
+      margin: 0;
+      padding: 0;
+    }
+
+    .row {
+      display: table-row;
+    }
+
+    .content-wrap {
+      display: table;
+      width: 100%;
+      height: 100%;
+    }
+
+    header {
+      background-color: #8ca0ff;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 2.5em;
+      text-align: center;
+    }
+
+    nav {
+      width: 20%;
+      background: #ffd60c;
+    }
+
+    main {
+      width: 60%;
+      background-color: #ffa08c;
+    }
+
+    aside {
+      width: 20%;
+      background-color: #ffff64;
+    }
+
+    footer {
+      background-color: #8cffa0;
+      text-align: center;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      display: table;
+      height: 100%;
+      width: 100%;
+    }
+
+    .cell {
+      display: table-cell;
+    }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <header class="cell">This is a header</header>
+  </div>
+
+  <div class="row">
+    <div class="content-wrap">
+    <nav class="cell">
+      <ul>
+        <li><a href="">Link to something</a></li>
+        <li><a href="">Link to something</a></li>
+        <li><a href="">Link to something</a></li>
+        <li><a href="">Link to something</a></li>
+        <li><a href="">Link to something</a></li>
+      </ul>
+    </nav>
+    <main class="cell">This is the main part</main>
+    <aside class="cell">This is a sidebar</aside>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <footer class="cell">This is a footer</footer>
+  </div>
+
+</body>
+</html>
