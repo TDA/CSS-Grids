@@ -20,16 +20,27 @@
       height: 100%;
     }
 
-    header {
+    .cell {
+      display: table-cell;
+    }
+
+    .row-header {
       background-color: #8ca0ff;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 2.5em;
       text-align: center;
+      height: 5%;
+    }
+
+    .row-footer {
+      background-color: #8cffa0;
+      height: 5%;
     }
 
     nav {
       width: 20%;
       background: #ffd60c;
+      vertical-align: middle;
     }
 
     main {
@@ -40,11 +51,7 @@
     aside {
       width: 20%;
       background-color: #ffff64;
-    }
-
-    footer {
-      background-color: #8cffa0;
-      text-align: center;
+      vertical-align: middle;
     }
 
     html {
@@ -55,21 +62,23 @@
       margin: 0;
       padding: 0;
       display: table;
+      text-align: center;
       height: 100%;
       width: 100%;
     }
 
-    .cell {
-      display: table-cell;
+    ul {
+      list-style: none;
+      padding: 0;
     }
   </style>
 </head>
 <body>
-  <div class="row">
+  <div class="row row-header">
     <header class="cell">This is a header</header>
   </div>
 
-  <div class="row">
+  <div class="row row-cell-container">
     <div class="content-wrap">
     <nav class="cell">
       <ul>
@@ -80,13 +89,23 @@
         <li><a href="">Link to something</a></li>
       </ul>
     </nav>
-    <main class="cell">This is the main part</main>
+    <main class="cell">
+      <p>This is the main part. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius diam at hendrerit condimentum. Donec sed fermentum velit, in aliquam felis. Vivamus aliquam mauris et est auctor vestibulum. Morbi eget ex sed purus porttitor ullamcorper vel id turpis. Fusce justo nibh, consequat vel dictum sodales, luctus vitae lacus. Curabitur condimentum nec elit in tincidunt. Fusce fringilla finibus libero, quis pellentesque magna volutpat et. Vestibulum augue neque, porta a tempus eget, efficitur et neque. Mauris eu porta felis. Phasellus sed purus ante.</p>
+
+      <p>Morbi eget ullamcorper metus. Donec gravida cursus massa, vel congue nibh tempus in. Nunc massa augue, tincidunt ac mi eu, suscipit eleifend mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam viverra ultricies eleifend. Proin dictum consectetur justo ac placerat. Quisque quis vehicula sem, luctus sollicitudin purus. Integer a tincidunt libero. Cras lobortis varius bibendum. Fusce lacinia maximus tellus eget viverra.</p>
+
+      <p>Donec scelerisque massa at neque ornare iaculis. Duis felis arcu, accumsan vitae magna sed, tempor dictum elit. Praesent semper metus vel neque congue, in laoreet lacus commodo. Aliquam faucibus malesuada diam, a sollicitudin libero fringilla vel. Cras sit amet neque vel ante sodales congue sagittis nec arcu. Vestibulum aliquam tellus sit amet odio rutrum, id fermentum arcu congue. Sed id lacinia odio. Nullam sit amet dapibus libero. Sed dictum varius tristique. Suspendisse suscipit nisi quam, sed egestas eros volutpat quis. In quis dignissim odio, nec interdum eros.</p>
+
+      <p>Duis velit massa, fermentum sed interdum sed, volutpat ac ligula. Cras nibh leo, dapibus a erat nec, congue consectetur massa. Donec tortor lorem, luctus quis fringilla at, elementum ut augue. Nulla ac mauris rutrum, rhoncus libero euismod, feugiat est. Nam ut lectus nec mi sollicitudin pellentesque. Sed id porttitor ex. Etiam tincidunt erat pretium ante luctus, ac dictum magna laoreet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis vestibulum justo ac sapien cursus eleifend. In nec dolor at nibh ullamcorper maximus. Sed maximus non eros sit amet sollicitudin. Integer et consequat tortor. Pellentesque tristique mattis est, vel condimentum enim feugiat at. Mauris eu nulla eget lacus consequat consequat quis vitae lectus. Cras at egestas mi.</p>
+
+      <p>Integer luctus porttitor aliquam. Integer tempor mauris quis tortor porta pellentesque. Vestibulum in nulla finibus, pharetra dui non, volutpat sapien. Pellentesque elit leo, iaculis at volutpat eget, facilisis sit amet lectus. Vivamus et pharetra sem. Curabitur porttitor odio felis. Ut eget arcu elementum mauris convallis volutpat et vel augue. Nunc porttitor eu odio et accumsan. Morbi sit amet dolor sit amet mauris tincidunt placerat non ac ligula. Integer vitae ultrices ante. In at justo quam. Suspendisse blandit, velit eu consequat eleifend, arcu eros fringilla nisi, ac dapibus sem risus sit amet elit. Nam nec ex at diam vehicula auctor. Nam interdum arcu in ex hendrerit pellentesque. Maecenas cursus nibh nec turpis efficitur, sed egestas nisi dapibus.</p>
+    </main>
     <aside class="cell">This is a sidebar</aside>
     </div>
   </div>
 
 
-  <div class="row">
+  <div class="row row-footer">
     <footer class="cell">This is a footer</footer>
   </div>
 
