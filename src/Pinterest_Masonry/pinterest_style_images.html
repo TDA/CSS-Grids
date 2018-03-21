@@ -10,9 +10,8 @@
     padding: 0;
     list-style: none;
     display: grid;
-    grid-gap: 4px;
-    grid-auto-flow: dense;
-    grid-template-columns: repeat(auto-fill, 20px);
+    grid-gap: 4px 20px;
+    grid-template-columns: repeat(auto-fill, 180px);
     grid-auto-rows: 20px;
   }
 
@@ -100,18 +99,13 @@
 </ul>
 
 <script>
+  window.addEventListener("load", resizeAllGridItems);
+  window.addEventListener("resize", resizeAllGridItems);
+
   function resizeGridItemRowSpan(item, rowHeight, rowGap) {
     // How much should our row span?
     var rowSpan = Math.ceil((item.querySelector('img').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
-    console.log(rowSpan);
     item.style.gridRowEnd = "span " + rowSpan;
-  }
-
-  function resizeGridItemColSpan(item, colWidth, colGap) {
-    // How much should our col span?
-    var colSpan = Math.ceil((item.querySelector('img').getBoundingClientRect().width + colGap) / (colWidth + colGap));
-    console.log(colSpan);
-    item.style.gridColumnEnd = "span " + colSpan;
   }
 
   function resizeAllGridItems() {
@@ -123,21 +117,11 @@
     // What is the default grid row gap?
     var rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
 
-    // What is the default grid column width?
-    var colWidth = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-template-columns'));
-
-    // What is the default grid column gap?
-    var colGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-column-gap'));
-
     allItems = document.getElementsByTagName("li");
     for (x = 0; x < allItems.length; x++) {
       resizeGridItemRowSpan(allItems[x], rowHeight, rowGap);
-      resizeGridItemColSpan(allItems[x], colWidth, colGap);
     }
   }
-
-  window.addEventListener("load", resizeAllGridItems);
-  window.addEventListener("resize", resizeAllGridItems);
 </script>
 
 </body>
