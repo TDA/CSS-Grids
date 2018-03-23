@@ -177,16 +177,6 @@ div[contenteditable="plaintext-only"].fake-focus {
     display: none;
 }
 
-@media only screen and (max-width: 1023px) {
-    .StaticLoggedOutHomePage-narrowLoginButton {
-        display: inline-block;
-    }
-
-    .StaticLoggedOutHomePage-login {
-        display: none;
-    }
-}
-
 .StreamsFooter {
     border-top: 1px solid #e6ecf0;
     padding: 11px 0;
