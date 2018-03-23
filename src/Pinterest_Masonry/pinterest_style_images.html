@@ -23,6 +23,31 @@
     box-sizing: border-box;
     max-width: 180px;
   }
+
+  li:nth-child(3n) {
+    grid-row: span 9;
+  }
+
+  li:nth-child(3n) img {
+    min-height: 180px;
+  }
+
+  li:nth-child(3n + 1) {
+    grid-row: span 11;
+  }
+
+  li:nth-child(3n + 1) img {
+    min-height: 220px;
+  }
+
+  li:nth-child(3n + 2) {
+    grid-row: span 12;
+  }
+
+  li:nth-child(3n + 2) img {
+    min-height: 240px;
+  }
+
 </style>
 <body>
 <ul class="grid-container">
@@ -91,7 +116,6 @@
   <li><img src="./images/Google%20Images/images%20(66).jpeg" alt="some photo"></li>
   <li><img src="./images/Google%20Images/images%20(67).jpeg" alt="some photo"></li>
   <li><img src="./images/Google%20Images/images%20(68).jpeg" alt="some photo"></li>
-  <li><img src="./images/Google%20Images/images%20(69).jpeg" alt="some photo"></li>
   <li><img src="./images/Google%20Images/images%20(70).jpeg" alt="some photo"></li>
   <li><img src="./images/Google%20Images/images%20(71).jpeg" alt="some photo"></li>
   <li><img src="./images/Google%20Images/images%20(72).jpeg" alt="some photo"></li>
@@ -104,26 +128,26 @@
   window.addEventListener("load", resizeAllGridItems);
   window.addEventListener("resize", resizeAllGridItems);
 
-  function resizeGridItemRowSpan(item, rowHeight, rowGap) {
-    // How much should our row span?
-    var rowSpan = Math.ceil((item.querySelector('img').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
-    item.style.gridRowEnd = "span " + rowSpan;
-  }
-
-  function resizeAllGridItems() {
-    var grid = document.querySelector(".grid-container");
-
-    // What is the default grid row height?
-    var rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
-
-    // What is the default grid row gap?
-    var rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
-
-    allItems = document.getElementsByTagName("li");
-    for (x = 0; x < allItems.length; x++) {
-      resizeGridItemRowSpan(allItems[x], rowHeight, rowGap);
-    }
-  }
+//  function resizeGridItemRowSpan(item, rowHeight, rowGap) {
+//    // How much should our row span?
+//    var rowSpan = Math.ceil((item.querySelector('img').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
+//    item.style.gridRowEnd = "span " + rowSpan;
+//  }
+//
+//  function resizeAllGridItems() {
+//    var grid = document.querySelector(".grid-container");
+//
+//    // What is the default grid row height?
+//    var rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+//
+//    // What is the default grid row gap?
+//    var rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+//
+//    allItems = document.getElementsByTagName("li");
+//    for (x = 0; x < allItems.length; x++) {
+//      resizeGridItemRowSpan(allItems[x], rowHeight, rowGap);
+//    }
+//  }
 </script>
 
 </body>
